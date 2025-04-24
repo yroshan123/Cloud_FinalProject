@@ -1,0 +1,153 @@
+/* Required height of parents of the Full Page Intro and Intro itself */
+html,
+body,
+.view {
+  height: 100%; }
+
+/* Navbar animation */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.top-nav-collapse {
+  background-color: #1C2331; }
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #1C2331; }
+
+  .container {
+    height: 100%;
+    align-content: center;
+}
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/*Imoort Fonts*/
+
+body {
+    /* background-image: url('../img/bg11.jpg'); */
+    /* background: white; */
+    /* background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%); */
+    background-image: linear-gradient( 107.7deg,  rgba(101,168,143,1) -30.7%, rgba(144,220,193,1) 7.2%,
+     rgba(225,203,150,1) 31.3%, rgba(251,166,150,1) 82.6%, rgba(250,54,65,1) 128.5% );
+    /* background-image:linear-gradient(to bottom, #7927b2, #fb3182); */
+    /* background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%); */
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #1c2331;
+    color: white;
+}
+.headingStyle {
+    /* background: #00000042; */
+    background: transparent;
+    border-color: indigo;
+    border: 2px;
+    margin-top: 100px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px;
+    
+   border-radius: 5px;
+
+    /* clip-path: polygon(0 0, 200% -354%, 89% 82%, 0px 43%); */
+}
+
+.headingStyle h2 {
+    
+    /* font-family: 'Verdana', sans-serif; */
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   text-align: center;
+   color: black;
+   background: rgba(0, 0, 0, 0.616);
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    /* background: linear-gradient( 107.7deg,  rgba(101,168,143,1) -30.7%, rgba(144,220,193,1) 7.2%,
+    rgba(225,203,150,1) 31.3%, rgba(251,166,150,1) 82.6%, rgba(250,54,65,1) 128.5% ); */
+   
+   
+        background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media(min-width: 960px) {
+    #avatarNavItem {
+        display: block;
+
+    }
+
+    #LoginwhenSmall {
+        display: none;
+    }
+
+    #SignupwhenSmall {
+        display: none;
+    }
+ .AdditionalInfoBody{
+     width: 50%;
+ }
+
+
+}
+
+@media(max-width: 959px) {
+    #avatarNavItemDropDown {
+        display: none;
+
+    }
+
+    #LoginwhenSmall {
+        display: block;
+    }
+
+    #SignupwhenSmall {
+        display: block;
+    }
+    .AdditionalInfoBody{
+       width: 80%;
+    }
+
+}
+
+.AdditionalInfo{
+    text-align: center;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.623);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.AdditionalInfoHeading h2{
+
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-weight: 400;
+     font-size: 30px;
+
+}
+
+.AdditionalInfoBody{
+   
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
