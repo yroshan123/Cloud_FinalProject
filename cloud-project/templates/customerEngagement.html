@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CC-MV</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <style type="text/css">
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Numans');
+
+
+
+
+        .card {
+            height: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .social_icon span {
+            font-size: 60px;
+            margin-left: 10px;
+            color: #FFC312;
+        }
+
+        .social_icon span:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-header h3 {
+            color: white;
+        }
+
+        .social_icon {
+            position: absolute;
+            right: 20px;
+            top: -45px;
+        }
+
+        .input-group-prepend span {
+            width: 50px;
+            background-color: #4caf50;
+            color: black;
+            border: 0 !important;
+        }
+
+        input:focus {
+            outline: 0 0 0 0 !important;
+            box-shadow: 0 0 0 0 !important;
+
+        }
+
+        .remember {
+            color: white;
+        }
+
+        .remember input {
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .login_btn {
+            color: black;
+            background-color: #4caf50;
+            width: auto;
+            color: white;
+        }
+
+        .login_btn:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .links {
+            color: white;
+        }
+
+        .links a {
+            margin-left: 4px;
+        }
+
+
+
+        body {
+            background-image: url("{{url_for('static', filename='img/bgimg.jpg')}}");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+  
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container" style="max-width: 90%;">
+
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <b>CCMV</b>
+            </a>
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('sampledatapullll')}}"> Sample Data Pull
+    
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('customerengagement')}}">Customer Engagement
+        
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for('searchpage')}}">Search Pull
+            
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('uploadpage')}}">Upload data
+                
+                                    </a>
+                                    </li>
+                    <li class="nav-item" id="LoginwhenSmall"><b style="color: white;"> Hello {{user_name}}</b></li>
+                    <li class="nav-item" id="SignupwhenSmall"><a style="color: white;" class="nav-link"
+                            href="{{url_for('logout')}}">Logout<i class="fa fa-sign-out fa-3"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav ml-auto nav-flex-icons" id="avatarNavItemDropDown">
+
+                    <li class="nav-item avatar dropdown" id="avatarNavItem">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <img src="{{url_for('static', filename='img/profilelogo2.png')}}"
+                                class="rounded-circle z-depth-0" alt="avatar image" width="30px">
+                        </a>
+                        <div id="avatarNavItemDropDown" class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-5" style="text-align: center;">
+                            <b> Hello {{user_name}}</b>
+                            <a class="dropdown-item waves-effect waves-light" href="{{url_for('logout')}}">Logout
+                                &nbsp<i class="fa fa-sign-out fa-3" aria-hidden="true"></i></a>
+                            <!-- <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a> -->
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Navbar -->
+
+
+
+
+
+
+
+    <!--Main layout-->
+    <main>
+       
+
+
+        <div class="container" style="width: 70%; margin-top: 100px;">
+            <div class='tableauPlaceholder' id='viz1638676225691' style='position: relative'><noscript><a href='#'><img
+                            alt='Customer Engagement by Team Codebusters '
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerEngagementOvertime&#47;Dashboard1&#47;1_rss.png'
+                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='CustomerEngagementOvertime&#47;Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerEngagementOvertime&#47;Dashboard1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object></div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1638676225691');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                }
+                else if (divElement.offsetWidth > 500) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%'; vizElement.style.height = '727px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+      <div style="height: 100px;">
+
+      </div>
+        <div class="container" style="width: 70%; height:auto;">
+            <div class='tableauPlaceholder' id='viz1638676995117' style='position: relative'><noscript><a href='#'><img
+                            alt='Effect on Customer Engagement upon Demographic factors '
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerEngagementOverDemographic&#47;Dashboard2&#47;1_rss.png'
+                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='CustomerEngagementOverDemographic&#47;Dashboard2' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerEngagementOverDemographic&#47;Dashboard2&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object></div>
+            <script
+                type='text/javascript'>                    var divElement = document.getElementById('viz1638676995117'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '1750px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '1750px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+        </div>
+        <div style="height: 700px;">
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <br>
+    <br>
+    <br>
+    
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+
+    </script>
+
+</body>
+
+</html>

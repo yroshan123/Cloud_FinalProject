@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CCMV</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <style type="text/css">
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Numans');
+
+
+
+
+        .card {
+            height: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .social_icon span {
+            font-size: 60px;
+            margin-left: 10px;
+            color: #FFC312;
+        }
+
+        .social_icon span:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-header h3 {
+            color: white;
+        }
+
+        .social_icon {
+            position: absolute;
+            right: 20px;
+            top: -45px;
+        }
+
+        .input-group-prepend span {
+            width: 50px;
+            background-color: #4caf50;
+            color: black;
+            border: 0 !important;
+        }
+
+        input:focus {
+            outline: 0 0 0 0 !important;
+            box-shadow: 0 0 0 0 !important;
+
+        }
+
+        .remember {
+            color: white;
+        }
+
+        .remember input {
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .login_btn {
+            color: black;
+            background-color: #4caf50;
+            width: auto;
+            color: white;
+        }
+
+        .login_btn:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .links {
+            color: white;
+        }
+
+        .links a {
+            margin-left: 4px;
+        }
+
+        /* canvas {
+      background:
+        linear-gradient(hsl(200, 50%, 80%) 0%,
+          hsl(200, 30%, 95%) 75%);
+      display: block;
+    }
+
+    .parallaxAnimation {
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: url(https://jackrugile.com/images/misc/skyline-texture.png);
+    } */
+
+        body {
+            background-image: url("{{url_for('static', filename='img/bgimg.jpg')}}");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container" style="max-width: 90%;">
+
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <b>CCMV</b>
+            </a>
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('sampledatapullll')}}"> Sample Data Pull
+    
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('customerengagement')}}">Customer Engagement
+        
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for('searchpage')}}">Search Pull
+            
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url_for('uploadpage')}}">Upload data
+                
+                                    </a>
+                                    </li>
+                    <li class="nav-item" id="LoginwhenSmall"><b style="color: white;"> Hello {{user_name}}</b></li>
+                    <li class="nav-item" id="SignupwhenSmall"><a style="color: white;" class="nav-link"
+                            href="{{url_for('logout')}}">Logout<i class="fa fa-sign-out fa-3"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav ml-auto nav-flex-icons" id="avatarNavItemDropDown">
+
+                    <li class="nav-item avatar dropdown" id="avatarNavItem">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <img src="{{url_for('static', filename='img/profilelogo2.png')}}"
+                                class="rounded-circle z-depth-0" alt="avatar image" width="30px">
+                        </a>
+                        <div id="avatarNavItemDropDown" class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                            aria-labelledby="navbarDropdownMenuLink-5" style="text-align: center;">
+                            <b> Hello {{user_name}}</b>
+                            <a class="dropdown-item waves-effect waves-light" href="{{url_for('logout')}}">Logout
+                                &nbsp<i class="fa fa-sign-out fa-3" aria-hidden="true"></i></a>
+                            <!-- <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a> -->
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Navbar -->
+
+
+
+
+
+
+    <!--Main layout-->
+    <main>
+        <div class="container" style="text-align: center;margin-top: 100px">
+            <form class="card card-sm" method="post" action="{{url_for('sampledatapull')}}" style=" width: 10%;
+            margin-left: auto;
+            margin-right: auto;">
+                <input class="btn-success" type="submit" value="SHOW DATA">
+            </form>
+            <table border=1 class="table-striped" 
+            style="background-color: white;
+         margin-top: 20px; 
+         border-radius: 10px;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>H.HSHD_NUM</th>
+                        <th>BASKET_NUM </th>
+                        <th>PURCHASE</th>
+                        <th>P.PRODUCT_NUM</th>
+                        <th>DEPARTMENT</th>
+                        <th>COMMODITY</th>
+                        <th>SPEND</th>
+                        <th>UNITS</th>
+                        <th>STORE_R</th>
+                        <th>WEEK_NUM</th>
+                        <th>YEAR</th>
+                        <th>L</th>
+                        <th>AGE_RANGE</th>
+                        <th>MARITAL</th>
+                        <th>INCOME_RANGE</th>
+                        <th>HOMEOWNER</th>
+                        <th>HSHD_COMPOSITION</th>
+                        <th>HH_SIZE</th>
+                        <th>CHILDREN</th>
+                    </tr>
+                </thead>
+
+
+                {% for item in data2 %}
+                <tr>
+                    {% for x in item %}
+                    <td> {{ x }}</td>
+
+                    {% endfor %}
+                </tr>
+
+
+                {% endfor %}
+            </table>
+
+        </div>
+
+
+
+    </main>
+    <!--Main layout-->
+
+    <br>
+    <br>
+    <br>
+    
+        
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+
+    </script>
+
+</body>
+
+</html>
