@@ -1,0 +1,7 @@
+Flask
+pandas
+scikit-learn
+google-cloud-bigquery
+mlxtend
+gunicorn
+db-dtypes
